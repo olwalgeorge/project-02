@@ -5,7 +5,7 @@ const doc = {
     title: "Users API",
     description: "API documentation for the Users service",
   },
-  host: `project-02-94tx.onrender.com || "localhost"}:${process.env.PORT || 3000}`,
+  host: "project-02-94tx.onrender.com",
   schemes: ["http"],
   tags: [
     {
