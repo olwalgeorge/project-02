@@ -15,7 +15,7 @@ This is a simple REST API for managing users, built with Node.js, Express, and M
 3. Install dependencies: `npm install` (or `yarn install`)
 4. Configure environment variables:
    - Create a `.env` file in the root directory.
-   - Add the following environment variable: `MONGODB_URI=mongodb://localhost:27017/myproject1`
+   - Add the following environment variable: `MONGODB_URI=mongodb://localhost:27017/myproject`
    - Replace `mongodb://localhost:27017/myproject1` with your MongoDB connection string.
 5. Start the server: `node server.js`
 
