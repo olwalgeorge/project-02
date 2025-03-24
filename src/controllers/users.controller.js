@@ -98,29 +98,11 @@ const deleteAllUsers = async (req, res, next) => {
   }
 };
 
-const getDevelopers = async (req, res, next) => {
-  try {
-    const developers = await usersService.getDevelopers();
-    if (!developers || developers.length === 0) {
-      const error = new Error("Developers not found");
-      error.statusCode = 404;
-      return next(error);
-    }
-    response.success(
-      res,
-      200,
-      "All developers listed successfully",
-      developers
-    );
-  } catch (error) {
-    return next(error);
-  }
-};
+
 
 module.exports = {
   createUser,
   getAllUsers,
-  getDevelopers,
   getUserById,
   updateUser,
   replaceUser,
