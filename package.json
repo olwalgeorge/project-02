@@ -1,0 +1,42 @@
+{
+  "name": "project-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run swagger-autogen",
+    "lint": "eslint .",
+    "lintFix": "eslint --fix .",
+    "format": "prettier --write .",
+    "swagger-autogen": "node ./src/config/swagger.js",
+    "startDev": "nodemon src/server.js",
+    "startDevSwagger": "npm run swagger-autogen && nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "George Olwal",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "glob": "^11.0.1",
+    "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
+    "swagger-autogen": "^2.23.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

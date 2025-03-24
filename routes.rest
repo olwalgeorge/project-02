@@ -1,0 +1,55 @@
+//w03-project-2/users.rest
+//Test project vocabulary and endpoints with sample rest operations
+
+### Create a new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "user_id": 12,
+    "username": "tech_savvy2",
+    "email": "tech.savvy2@example.com",
+    "first_name": "Toby",
+    "last_name": "Lewis",
+    "joined_date": "2023-11-01T19:00:00.000Z",
+    "last_login_ip": "192.168.1.22"
+}
+
+### Get all users
+GET http://localhost:3000/users
+
+### Get user by ID (user-id)
+GET http://localhost:3000/users/11
+
+### Update user by ID
+PATCH http://localhost:3000/users/67daa208b432578cae3dd197
+Content-Type: application/json
+
+{
+    "user_id": 11,
+    "username": "tech_savvy",
+    "email": "tech.savvy@example.com",
+    "first_name": "Toby2",
+    "last_name": "Lewis"
+}
+
+### Update user by ID using PUT
+PUT http://localhost:3000/users/67daa208b432578cae3dd197
+Content-Type: application/json
+
+{
+    "user_id": "11",    
+    "email": "tech.savvy@example.com",
+    "first_name": "Toby4",
+    "last_name": "Lewis"
+}
+
+### Delete user by ID
+DELETE http://localhost:3000/users/67daa208b432578cae3dd197
+
+### Delete all users
+DELETE http://localhost:3000/users
+
+### Get all users with role "Developer"
+GET http://localhost:3000/users/developer
+
