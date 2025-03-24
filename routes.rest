@@ -9,6 +9,7 @@ Content-Type: application/json
     "user_id": 12,
     "username": "tech_savvy2",
     "email": "tech.savvy2@example.com",
+    "avatar_url": "",
     "first_name": "Toby",
     "last_name": "Lewis",
     "joined_date": "2023-11-01T19:00:00.000Z",
@@ -29,6 +30,7 @@ Content-Type: application/json
     "user_id": 11,
     "username": "tech_savvy",
     "email": "tech.savvy@example.com",
+    "avatar_url": "",
     "first_name": "Toby2",
     "last_name": "Lewis"
 }
@@ -38,8 +40,9 @@ PUT http://localhost:3000/users/67daa208b432578cae3dd197
 Content-Type: application/json
 
 {
-    "user_id": "11",    
+    "user_id": "11",
     "email": "tech.savvy@example.com",
+    "avatar_url": "",
     "first_name": "Toby4",
     "last_name": "Lewis"
 }
@@ -49,7 +52,4 @@ DELETE http://localhost:3000/users/67daa208b432578cae3dd197
 
 ### Delete all users
 DELETE http://localhost:3000/users
-
-### Get all users with role "Developer"
-GET http://localhost:3000/users/developer
 
