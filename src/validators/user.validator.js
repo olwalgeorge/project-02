@@ -23,12 +23,12 @@ const validateUserData = async (data) => {
     errors.avatar_url = "Avatar URL must be a string";
   }
 
-  if (data.first_name && typeof data.first_name !== "string") {
-    errors.first_name = "First name must be a string";
+  if (data.first_name && (typeof data.first_name !== "string" || data.first_name.length > 20)) {
+    errors.first_name = "First name must be a string and not exceed 20 characters";
   }
 
-  if (data.last_name && typeof data.last_name !== "string") {
-    errors.last_name = "Last name must be a string";
+  if (data.last_name && (typeof data.last_name !== "string" || data.last_name.length > 20)) {
+    errors.last_name = "Last name must be a string and not exceed 20 characters";
   }
 
   if (data.joined_date && isNaN(Date.parse(data.joined_date))) {
