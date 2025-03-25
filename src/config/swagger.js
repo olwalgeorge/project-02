@@ -5,7 +5,7 @@ const doc = {
     title: "Users API",
     description: "API documentation for the Users service",
   },
-  host: "project-02-94tx.onrender.com",
+  host: "localhost:3000",
   schemes: ["http"],
   tags: [
     {

@@ -3,7 +3,7 @@ const express = require("express");
 const routes = express.Router();
 const {
   createUser,
-  getAllUsers,  
+  getAllUsers,
   getUserById,
   updateUser,
   replaceUser,
@@ -56,10 +56,10 @@ routes.get(
 routes.get(
   "/:userId",
   /* #swagger.tags = ['Users'] */
-  /* #swagger.description = 'Endpoint to retrieve a user by ID' */
+  /* #swagger.description = 'Endpoint to retrieve a user by user_id' */
   /* #swagger.parameters['userId'] = {
     in: 'path',
-    description: 'ID of the user',
+    description: 'user_id of the user',
     required: true,
     type: 'string'
   } */
@@ -76,7 +76,7 @@ routes.patch(
   /* #swagger.description = 'Endpoint to update a user' */
   /* #swagger.parameters['_id'] = {
     in: 'path',
-    description: 'internal ID of the user',
+    description: 'internal MongoDB ID of the user',
     required: true,
     type: 'string'
   } */
@@ -112,7 +112,7 @@ routes.put(
   /* #swagger.description = 'Endpoint to replace a user' */
   /* #swagger.parameters['_id'] = {
     in: 'path',
-    description: 'internal ID of the user',
+    description: 'internal MongoDB ID of the user',
     required: true,
     type: 'string'
   } */
@@ -147,7 +147,7 @@ routes.delete(
   /* #swagger.description = 'Endpoint to delete a user' */
   /* #swagger.parameters['_id'] = {
     in: 'path',
-    description: 'internal ID of the user',
+    description: 'internal MongoDB ID of the user',
     required: true,
     type: 'string'
   } */
@@ -167,4 +167,3 @@ routes.delete(
 );
 
 module.exports = routes;
-

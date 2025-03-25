@@ -4,7 +4,7 @@ const connectDB = require("./config/database");
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("../swagger_output.json");
 const cors = require("cors");
-const { errorHandler } = require("./middlewares/error.middleware");
+const errorMiddleware = require("./middlewares/error.middleware");
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.use("/", routes);
 connectDB();
 
 // Error handling middleware
-app.use(errorHandler);
+app.use(errorMiddleware);
 
 module.exports = app;
 

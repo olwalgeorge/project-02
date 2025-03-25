@@ -5,7 +5,7 @@
     "description": "API documentation for the Users service",
     "version": "1.0.0"
   },
-  "host": "project-02-94tx.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "tags": [
     {
@@ -231,14 +231,14 @@
         "tags": [
           "Users"
         ],
-        "description": "Endpoint to retrieve a user by ID",
+        "description": "Endpoint to retrieve a user by user_id",
         "parameters": [
           {
             "name": "userId",
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "ID of the user"
+            "description": "user_id of the user"
           }
         ],
         "responses": {
@@ -266,7 +266,7 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "internal ID of the user"
+            "description": "internal MongoDB ID of the user"
           },
           {
             "name": "body",
@@ -426,7 +426,7 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "internal ID of the user"
+            "description": "internal MongoDB ID of the user"
           },
           {
             "name": "body",
@@ -586,7 +586,7 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "internal ID of the user"
+            "description": "internal MongoDB ID of the user"
           }
         ],
         "responses": {
