@@ -1,6 +1,7 @@
 // src/validators/user.validator.js
 
-const validateUserData = async (data) => {
+// eslint-disable-next-line no-unused-vars
+const validateUserData = async (data, userIdToExclude = null) => {
   const errors = {};
 
   if (!data.user_id || typeof data.user_id !== "number") {
@@ -45,3 +46,4 @@ const validateUserData = async (data) => {
 module.exports = {
   validateUserData,
 };
+
