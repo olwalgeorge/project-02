@@ -13,7 +13,8 @@ const validateUser = async (req, res, next) => {
         errors = {};
       }
       errors._id = "Invalid MongoDB _id";
-      return next({ // Early return here
+      return next({
+        // Early return here
         statusCode: 400,
         message: "Validation failed",
         errors: errors,
@@ -23,7 +24,10 @@ const validateUser = async (req, res, next) => {
 
   // Check for duplicate keys (application-level)
   if (data.user_id) {
-    const existingUserById = await User.findOne({ user_id: data.user_id, _id: { $ne: req.params._id } });
+    const existingUserById = await User.findOne({
+      user_id: data.user_id,
+      _id: { $ne: req.params._id },
+    });
     if (existingUserById) {
       if (!errors) errors = {};
       errors.user_id = `User ID '${data.user_id}' already exists.`;
@@ -31,7 +35,10 @@ const validateUser = async (req, res, next) => {
   }
 
   if (data.username) {
-    const existingUserByUsername = await User.findOne({ username: data.username, _id: { $ne: req.params._id } });
+    const existingUserByUsername = await User.findOne({
+      username: data.username,
+      _id: { $ne: req.params._id },
+    });
     if (existingUserByUsername) {
       if (!errors) errors = {};
       errors.username = `Username '${data.username}' already exists.`;
@@ -39,7 +46,10 @@ const validateUser = async (req, res, next) => {
   }
 
   if (data.email) {
-    const existingUserByEmail = await User.findOne({ email: data.email, _id: { $ne: req.params._id } });
+    const existingUserByEmail = await User.findOne({
+      email: data.email,
+      _id: { $ne: req.params._id },
+    });
     if (existingUserByEmail) {
       if (!errors) errors = {};
       errors.email = `Email '${data.email}' already exists.`;

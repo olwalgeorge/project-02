@@ -13,4 +13,3 @@ routes.get("/", (req, res) => {
 routes.use("/users", userRoutes);
 
 module.exports = routes;
-

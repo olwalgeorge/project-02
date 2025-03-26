@@ -7,19 +7,19 @@ const errorFormat = winston.format((info) => {
     return {
       ...info,
       message: info.message,
-      stack: config.env === "development" ? info.stack : undefined
+      stack: config.env === "development" ? info.stack : undefined,
     };
   }
-  
+
   // Handle case where error is passed in metadata
   if (info.error && info.error instanceof Error) {
     return {
       ...info,
       message: `${info.message} - ${info.error.message}`,
-      stack: config.env === "development" ? info.error.stack : undefined
+      stack: config.env === "development" ? info.error.stack : undefined,
     };
   }
-  
+
   return info;
 });
 
@@ -40,10 +40,10 @@ const logger = winston.createLogger({
     new winston.transports.Console({
       stderrLevels: ["error"],
       format: winston.format.combine(
-        config.env === "development" 
-          ? winston.format.colorize() 
+        config.env === "development"
+          ? winston.format.colorize()
           : winston.format.uncolorize()
-      )
+      ),
     }),
   ],
 });

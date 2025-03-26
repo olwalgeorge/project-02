@@ -8,4 +8,3 @@ function success(res, statusCode, message, data) {
 }
 
 module.exports = { success };
-

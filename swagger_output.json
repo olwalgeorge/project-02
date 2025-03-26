@@ -5,7 +5,7 @@
     "description": "API documentation for the Users service",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-project-02-if3i.onrender.com",
   "basePath": "/",
   "tags": [
     {
@@ -17,15 +17,11 @@
       "description": "Endpoints related to user operations"
     }
   ],
-  "schemes": [
-    "http"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "Home"
-        ],
+        "tags": ["Home"],
         "description": "Home page with a link to the API documentation",
         "responses": {
           "200": {
@@ -36,9 +32,7 @@
     },
     "/users/": {
       "post": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "Endpoint to create a new user",
         "parameters": [
           {
@@ -198,9 +192,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "Endpoint to retrieve all users",
         "responses": {
           "200": {
@@ -212,9 +204,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "Endpoint to delete all users",
         "responses": {
           "200": {
@@ -228,9 +218,7 @@
     },
     "/users/{userId}": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "Endpoint to retrieve a user by user_id",
         "parameters": [
           {
@@ -256,9 +244,7 @@
     },
     "/users/{_id}": {
       "patch": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "Endpoint to update a user",
         "parameters": [
           {
@@ -416,9 +402,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "Endpoint to replace a user",
         "parameters": [
           {
@@ -576,9 +560,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "Endpoint to delete a user",
         "parameters": [
           {

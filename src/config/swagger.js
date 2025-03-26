@@ -29,4 +29,3 @@ swaggerAutogen(outputFile, endpointsFiles, doc)
   .catch((error) => {
     logger.error("Error generating Swagger documentation:", error);
   });
-

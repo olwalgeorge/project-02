@@ -43,10 +43,7 @@ const getUserById = async (req, res, next) => {
 
 const updateUser = async (req, res, next) => {
   try {
-    const updatedUser = await usersService.updateUser(
-      req.params._id,
-      req.body
-    );
+    const updatedUser = await usersService.updateUser(req.params._id, req.body);
     if (!updatedUser) {
       const error = new Error("User not found");
       error.statusCode = 404;
@@ -69,12 +66,7 @@ const replaceUser = async (req, res, next) => {
       error.statusCode = 404;
       return next(error);
     }
-    response.success(
-      res,
-      200,
-      "User replaced successfully",
-      replacedUser
-    );
+    response.success(res, 200, "User replaced successfully", replacedUser);
   } catch (error) {
     return next(error);
   }
@@ -98,8 +90,6 @@ const deleteAllUsers = async (req, res, next) => {
   }
 };
 
-
-
 module.exports = {
   createUser,
   getAllUsers,
@@ -109,4 +99,3 @@ module.exports = {
   deleteUser,
   deleteAllUsers,
 };
-

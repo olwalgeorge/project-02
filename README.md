@@ -35,15 +35,15 @@ Get all users.
 
 Get user by ID.
 
-### PATCH /users/:_id
+### PATCH /users/:\_id
 
 Update user by ID.
 
-### PUT /users/:_id
+### PUT /users/:\_id
 
 Update user by ID using PUT.
 
-### DELETE /users/:_id
+### DELETE /users/:\_id
 
 Delete user by ID.
 
@@ -121,4 +121,3 @@ DELETE http://localhost:3000/users
 ### Get all users with role "Developer"
 GET http://localhost:3000/users/developer
 ```
-

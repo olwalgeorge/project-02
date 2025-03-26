@@ -37,11 +37,10 @@ async function getUserById(userId) {
 
 async function updateUser(_id, updateData) {
   try {
-    const updatedUser = await User.findByIdAndUpdate(
-      { _id: _id },
-      updateData,
-      { new: true, runValidators: true }
-    );
+    const updatedUser = await User.findByIdAndUpdate({ _id: _id }, updateData, {
+      new: true,
+      runValidators: true,
+    });
     if (!updatedUser) {
       const error = new Error("User not found");
       error.statusCode = 404;
@@ -108,14 +107,12 @@ async function deleteAllUsers() {
   }
 }
 
-
 module.exports = {
   createUser,
-  getAllUsers, 
+  getAllUsers,
   getUserById,
   updateUser,
   replaceUser,
   deleteUser,
   deleteAllUsers,
 };
-

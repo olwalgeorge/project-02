@@ -26,4 +26,3 @@ connectDB();
 app.use(errorMiddleware);
 
 module.exports = app;
-
