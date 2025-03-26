@@ -1,12 +1,13 @@
 const swaggerAutogen = require("swagger-autogen")();
+const logger = require("../utils/logger");
 
 const doc = {
   info: {
     title: "Users API",
     description: "API documentation for the Users service",
   },
-  host: "localhost:3000",
-  schemes: ["http"],
+  host: "project-02-94tx.onrender.com",
+  schemes: ["https"],
   tags: [
     {
       name: "Home",
@@ -26,6 +27,6 @@ const endpointsFiles = ["../routes/index.js"]; // Paths to routes
 swaggerAutogen(outputFile, endpointsFiles, doc)
   .then(() => require("../server"))
   .catch((error) => {
-    console.error("Error generating Swagger documentation:", error);
+    logger.error("Error generating Swagger documentation:", error);
   });
 

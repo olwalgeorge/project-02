@@ -1,13 +1,14 @@
 // src/config/database.js
 const mongoose = require("mongoose");
 const config = require("./config");
+const logger = require("../utils/logger");
 
 async function connectDB() {
   try {
     const con = await mongoose.connect(config.database.url);
-    console.log(`MongoDB Connected: ${con.connection.host}`);
+    logger.info(`MongoDB Connected: ${con.connection.host}`);
   } catch (error) {
-    console.error("MongoDB Connection Error:", error);
+    logger.error("MongoDB Connection Error:", error);
     process.exit(1);
   }
 }

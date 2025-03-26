@@ -1,11 +1,12 @@
 const User = require("../models/user.model");
+const logger = require("../utils/logger");
 
 async function createUser(userData) {
   try {
     const user = new User(userData);
     return await user.save();
   } catch (error) {
-    console.error("Error creating user:", error);
+    logger.error("Error creating user:", error);
     throw error;
   }
 }
@@ -14,7 +15,7 @@ async function getAllUsers() {
   try {
     return await User.find();
   } catch (error) {
-    console.error("Error getting all users:", error);
+    logger.error("Error getting all users:", error);
     throw error;
   }
 }
@@ -29,7 +30,7 @@ async function getUserById(userId) {
     }
     return user;
   } catch (error) {
-    console.error("Error getting user by ID:", error);
+    logger.error("Error getting user by ID:", error);
     throw error;
   }
 }
@@ -48,7 +49,7 @@ async function updateUser(_id, updateData) {
     }
     return updatedUser;
   } catch (error) {
-    console.error("Error updating user:", error);
+    logger.error("Error updating user:", error);
     if (error.name === "ValidationError") {
       // Extract validation errors
       const validationErrors = {};
@@ -78,7 +79,7 @@ async function replaceUser(_id, replaceData) {
     }
     return replacedUser;
   } catch (error) {
-    console.error("Error replacing user:", error);
+    logger.error("Error replacing user:", error);
     throw error;
   }
 }
@@ -93,7 +94,7 @@ async function deleteUser(_id) {
     }
     return deletedUser;
   } catch (error) {
-    console.error("Error deleting user:", error);
+    logger.error("Error deleting user:", error);
     throw error;
   }
 }
@@ -102,7 +103,7 @@ async function deleteAllUsers() {
   try {
     await User.deleteMany();
   } catch (error) {
-    console.error("Error deleting all users:", error);
+    logger.error("Error deleting all users:", error);
     throw error;
   }
 }
