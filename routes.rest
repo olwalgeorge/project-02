@@ -2,7 +2,7 @@
 //Test project vocabulary and endpoints with sample rest operations
 
 ### Create a new user
-POST https://cse341-project-02.onrender.com/users
+POST https://cse341-project-02-if3i.onrender.com/users
 Content-Type: application/json
 
 {
@@ -17,13 +17,13 @@ Content-Type: application/json
 }
 
 ### Get all users
-GET https://cse341-project-02.onrender.com/users
+GET https://cse341-project-02-if3i.onrender.com/users
 
 ### Get user by ID (user-id)
-GET https://cse341-project-02.onrender.com/users/1
+GET https://cse341-project-02-if3i.onrender.com/users/1
 
 ### Update user by ID
-PATCH https://cse341-project-02.onrender.com/users/67daa208b432578cae3dd197
+PATCH https://cse341-project-02-if3i.onrender.com/users/67daa208b432578cae3dd197
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 }
 
 ### Update user by ID using PUT
-PUT https://cse341-project-02.onrender.com/users/67daa208b432578cae3dd197
+PUT https://cse341-project-02-if3i.onrender.com/users/67daa208b432578cae3dd197
 Content-Type: application/json
 
 {
@@ -48,8 +48,8 @@ Content-Type: application/json
 }
 
 ### Delete user by ID
-DELETE https://cse341-project-02.onrender.com/users/67daa208b432578cae3dd197
+DELETE https://cse341-project-02-if3i.onrender.com/users/67daa208b432578cae3dd197
 
 ### Delete all users
-DELETE https://cse341-project-02.onrender.com/users
+DELETE https://cse341-project-02-if3i.onrender.com/users
 
