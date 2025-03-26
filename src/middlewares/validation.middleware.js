@@ -20,6 +20,20 @@ const validateUser = async (req, res, next) => {
         errors: errors,
       });
     }
+
+    // Check if the _id exists in the database
+    const existingUserByIdFromParams = await User.findById(req.params._id);
+    if (!existingUserByIdFromParams) {
+      if (!errors) {
+        errors = {};
+      }
+      errors._id = "User not found with provided _id";
+      return next({
+        statusCode: 404,
+        message: "User not found",
+        errors: errors,
+      });
+    }
   }
 
   // Check for duplicate keys (application-level)

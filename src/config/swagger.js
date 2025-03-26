@@ -7,7 +7,7 @@ const doc = {
     description: "API documentation for the Users service",
   },
   host: "cse341-project-02-if3i.onrender.com",
-  schemes: ["https"],
+  schemes: ["https", "http"],
   tags: [
     {
       name: "Home",
